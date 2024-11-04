@@ -18,11 +18,20 @@
             <ToolBarTray Height="40" DockPanel.Dock="Top">
                 <ToolBar Height="38" Width="400" Background="Chartreuse">
                     <Label Content="筆刷色彩" VerticalAlignment="Center"></Label>
-                    <xctk:ColorPicker Width="100"/>
+                    <xctk:ColorPicker x:Name="strokeColorPicker" Width="100" SelectedColorChanged="strokeColorPicker_SelectedColorChanged"/>
                 </ToolBar>
             </ToolBarTray>
-            <Canvas Width="756" Background="#FFF2F4C0" DockPanel.Dock="Top" Height="400"/>
+            <Canvas x:Name="myCanvas" Width="756" Background="#FFF2F4C0" DockPanel.Dock="Top" Height="375" MouseEnter="myCanvas_MouseEnter" MouseMove="myCanvas_MouseMove" MouseLeftButtonDown="myCanvas_MouseLeftButtonDown" MouseUp="myCanvas_MouseUp"/>
+            <StatusBar Height="30" DockPanel.Dock="Bottom" Background="LightGray">
+                <StatusBarItem>
+                    <Label x:Name="statusLabel" Content="Ready" FontSize="14"/>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Label x:Name="statusPoint" Content="(0, 0) - (0, 0)" FontSize="14"/>
+                </StatusBarItem>
+                
+            </StatusBar>
         </DockPanel>
-
+        
     </Grid>
 </Window>
