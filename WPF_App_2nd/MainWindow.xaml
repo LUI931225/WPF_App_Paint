@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="Paint" Height="450" Width="800">
     <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="80" LastChildFill="False" Margin="0,0,0,0" VerticalAlignment="Top">
+            <Menu Height="30" DockPanel.Dock="Top">
+                <MenuItem Height="25" Header="檔案" VerticalAlignment="Center">
+                    <MenuItem Header="新增畫布"/>
+                    <MenuItem Header="開啟檔案"/>
+                </MenuItem>
+            </Menu>
+            <ToolBarTray Height="40" DockPanel.Dock="Top">
+                <ToolBar Height="38" Width="400" Background="Chartreuse">
+                    <Label Content="筆刷色彩" VerticalAlignment="Center"></Label>
+                    
+                </ToolBar>
+                
+            </ToolBarTray>
+        </DockPanel>
 
     </Grid>
 </Window>
