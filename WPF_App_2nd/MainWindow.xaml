@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:WPF_App_2nd"
         mc:Ignorable="d"
-        Title="Paint" Height="450" Width="800">
+        Title="Paint" Height="485" Width="800">
     <Grid>
-        <DockPanel HorizontalAlignment="Left" Height="80" LastChildFill="False" Margin="0,0,0,0" VerticalAlignment="Top">
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" VerticalAlignment="Top">
             <Menu Height="30" DockPanel.Dock="Top">
                 <MenuItem Height="25" Header="檔案" VerticalAlignment="Center">
                     <MenuItem Header="新增畫布"/>
@@ -17,10 +18,10 @@
             <ToolBarTray Height="40" DockPanel.Dock="Top">
                 <ToolBar Height="38" Width="400" Background="Chartreuse">
                     <Label Content="筆刷色彩" VerticalAlignment="Center"></Label>
-                    
+                    <xctk:ColorPicker Width="100"/>
                 </ToolBar>
-                
             </ToolBarTray>
+            <Canvas Width="756" Background="#FFF2F4C0" DockPanel.Dock="Top" Height="400"/>
         </DockPanel>
 
     </Grid>
